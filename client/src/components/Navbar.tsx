@@ -1,0 +1,17 @@
+
+const Navbar = ()=>{
+    return(
+        <div className="bg-blue-800 h-12 sm:h-15 md:h-20 flex items-center">
+            <div className="flex justify-between w-[95%] mx-auto">
+                <img src="./compass.webp" alt="compassLogo" className="h-8 my-auto bg-white rounded-full border border-blue-800 compassLogo sm:h-12 md:h-15"/>
+                <div className="hidden sm:flex justify-between w-50 w-32 items-center text-white md:text-xl md:w-80">
+                    <p>Services</p>
+                    <p>About</p>
+                    <p>Contact</p>
+                </div>
+            </div>
+        </div>
+    );
+}
+
+export default Navbar;
