@@ -3,3 +3,11 @@
 .compassLogo{
     background-image: radial-gradient(aqua 10%, oklch(42.4% 0.199 265.638) 70%);
 }
+
+.sectionLink {
+  transition: transform 0.3s ease;
+}
+
+.sectionLink:hover {
+  transform: scale(1.1);
+}
