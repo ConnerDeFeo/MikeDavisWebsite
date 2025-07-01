@@ -5,7 +5,7 @@ const Home = () => {
 
     const InformationComponent = (imageSrc: string, title: string, paragraph: string) => {
         return (
-            <div>
+            <div className="w-[60%] mx-auto">
                 <img src={imageSrc} alt={title} className={imageStyling} />
                 <h2 className={titleStyling}>{title}</h2>
                 <p className={paragraphStyling}>{paragraph}</p>
@@ -23,8 +23,8 @@ const Home = () => {
                 <h1 className="text-4xl md:text-6xl font-bold mt-50">Davis Emergency Solutions</h1>
                 <p className="text-2xl md:text-4xl">Navigating Risk, Anchoring Resilience</p>
             </div>
-            <div>
-                <div className="grid gap-y-10 md:flex h-3 w-[80%] mx-auto mt-15 justify-center md:justify-between items-center h-100">
+            <div className="border-y-5 border-blue-[800] mt-10 w-[80%] mx-auto">
+                <div className="grid gap-y-10 lg:flex mx-auto my-15 justify-center lg:justify-between lg:gap-x-10 h-full">
                     {InformationComponent(
                         "/PrivateOrgsHomePage.jpg",
                         "Private Organizations",
