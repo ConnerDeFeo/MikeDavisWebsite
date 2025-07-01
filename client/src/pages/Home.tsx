@@ -1,17 +1,24 @@
+import { useNavigate } from "react-router-dom";
+
+//Base page for the website
 const Home = () => {
     const imageStyling = "h-50 w-50 object-cover rounded-xl mx-auto";
     const titleStyling = "text-2xl text-center font-bold my-3 text-blue-800";
     const paragraphStyling = "text-center text-lg";
+    const navigate = useNavigate();
 
-    const InformationComponent = (imageSrc: string, title: string, paragraph: string) => {
+    //Each of the three differnt sectors on the home page
+    const InformationComponent = (imageSrc: string, title: string, paragraph: string, onClick:()=>void) => {
         return (
-            <div className="w-[60%] mx-auto">
+            <div className="w-[60%] mx-auto sectionLink cursor-pointer" onClick={onClick}>
                 <img src={imageSrc} alt={title} className={imageStyling} />
                 <h2 className={titleStyling}>{title}</h2>
                 <p className={paragraphStyling}>{paragraph}</p>
             </div>
         );
     };
+
+    
     return (
         <>
             <div
@@ -30,21 +37,24 @@ const Home = () => {
                         "Private Organizations",
                         `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tempus 
                         consequat lacinia. Aenean sit amet Lorem ipsum dolor sit amet, consectetur 
-                        adipiscing elit. Nullam tempus consequat lacinia. Aenean sit amet `
+                        adipiscing elit. Nullam tempus consequat lacinia. Aenean sit amet `,
+                        ()=>navigate("/PrivateOrginizations")
                     )}
                     {InformationComponent(
                         "/HealthcareHomePage.jpg",
                         "Healthcare Organizations",
                         `Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                         Nullam tempus consequat lacinia. Aenean sit amet c
-                        adipiscing elit. Nullam tempus consequat lacinia. Aenean sit amet `
+                        adipiscing elit. Nullam tempus consequat lacinia. Aenean sit amet `,
+                        ()=>navigate("/HealthCareOrginizations")
                     )}
                     {InformationComponent(
                         "/EducationHomePage.jpg",
                         "Education Organizations",
                         `Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                         Nullam tempus consequat lacinia. Aenean sit amet c
-                        adipiscing elit. Nullam tempus consequat lacinia. Aenean sit amet `
+                        adipiscing elit. Nullam tempus consequat lacinia. Aenean sit amet `,
+                        ()=>navigate("/Education")
                     )}
                 </div>
             </div>

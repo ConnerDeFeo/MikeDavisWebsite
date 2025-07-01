@@ -12,9 +12,9 @@ const Navbar = ()=>{
                     onClick={() => navigate("/")}
                 />
                 <div className="hidden sm:flex justify-between w-50 w-32 items-center text-white md:text-xl md:w-80">
-                    <p className="cursor-pointer" onClick={() => navigate("/services")}>Services</p>
-                    <p className="cursor-pointer" onClick={() => navigate("/about")}>About</p>
-                    <p className="cursor-pointer" onClick={() => navigate("/contact")}>Contact</p>
+                    <p className="cursor-pointer" onClick={() => navigate("/Services")}>Services</p>
+                    <p className="cursor-pointer" onClick={() => navigate("/About")}>About</p>
+                    <p className="cursor-pointer" onClick={() => navigate("/Contact")}>Contact</p>
                 </div>
             </div>
         </div>
