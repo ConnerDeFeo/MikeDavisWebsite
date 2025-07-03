@@ -12,6 +12,7 @@ import Contact from './pages/Contact';
 import Footer from './components/Footer';
 import PrivateOrginizations from './pages/PrivateOrginizations';
 import HealthCare from './pages/HealthCare';
+import Education from './pages/Education';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path="/Contact" element={<Contact />} />
         <Route path="/PrivateOrginizations" element={<PrivateOrginizations />} />
         <Route path="/HealthCare" element={<HealthCare />} />
+        <Route path="/Education" element={<Education />} />
       </Routes>
       <Footer/>
     </Router>
