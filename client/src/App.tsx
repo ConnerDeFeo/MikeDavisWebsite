@@ -11,6 +11,7 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import Footer from './components/Footer';
 import PrivateOrginizations from './pages/PrivateOrginizations';
+import HealthCare from './pages/HealthCare';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="/About" element={<About />} />
         <Route path="/Contact" element={<Contact />} />
         <Route path="/PrivateOrginizations" element={<PrivateOrginizations />} />
+        <Route path="/HealthCare" element={<HealthCare />} />
       </Routes>
       <Footer/>
     </Router>

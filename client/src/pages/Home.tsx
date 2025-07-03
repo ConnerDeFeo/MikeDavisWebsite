@@ -46,7 +46,7 @@ const Home = () => {
                         `Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                         Nullam tempus consequat lacinia. Aenean sit amet c
                         adipiscing elit. Nullam tempus consequat lacinia. Aenean sit amet `,
-                        ()=>navigate("/HealthCareOrginizations")
+                        ()=>navigate("/HealthCare")
                     )}
                     {InformationComponent(
                         "/EducationHomePage.jpg",
