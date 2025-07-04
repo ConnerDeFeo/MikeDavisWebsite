@@ -11,12 +11,12 @@ const Education = ()=>{
     const FactComponent = (title:string, imgSrc:string, alt:string, text:string, invert:boolean):React.ReactNode=>{
 
         return(
-            <div className="w-85 md:w-175 xl:w-250 grid md:grid-cols-2 innerShadow py-5 px-2">
-                <div>
-                    <h1 className="mb-5 text-2xl md:text-4xl xl:text-5xl w-70 md:w-125 xl:w-175 text-white bg-blue-600 rounded-xl py-3 md:py-5 text-center mx-auto">{title}</h1>
-                    <p className={"text-lg md:text-2xl xl:text-3xl p-4 rounded-lg"}>{text}</p>
+            <div className="w-85 md:w-175 xl:w-250 grid md:grid-cols-2 py-5 px-2 items-center">
+                <div className={`${invert && "md:col-start-2"}`}>
+                    <h1 className="mb-5 text-2xl md:text-4xl xl:text-5xl text-white bg-blue-600 rounded-xl py-3 md:py-5 text-center mx-auto">{title}</h1>
+                    <p className="text-lg md:text-2xl xl:text-3xl p-4 rounded-lg innerShadow">{text}</p>
                 </div>
-                <img src={imgSrc} alt={alt} className={"h-50 mx-auto my-5"}/>
+                <img src={imgSrc} alt={alt} className={`h-50 mx-auto my-5 h-60 md:h-80 xl:h-100 ${invert && "md:col-start-1 md:row-start-1" }`}/>
             </div>
         );
     }
