@@ -1,9 +1,8 @@
 import Navbar from './components/Navbar'
 import {
-  BrowserRouter as Router,
   Routes,
   Route,
-  Link,
+  useLocation,
 } from 'react-router-dom';
 import Home from './pages/Home';
 import Services from './pages/Services';
@@ -15,8 +14,9 @@ import HealthCare from './pages/HealthCare';
 import Education from './pages/Education';
 
 function App() {
+  const location = useLocation();
   return (
-    <Router>
+    <>
       <Navbar/>
       <Routes>
         <Route path="/" element={<Home />} />
@@ -27,8 +27,8 @@ function App() {
         <Route path="/HealthCare" element={<HealthCare />} />
         <Route path="/Education" element={<Education />} />
       </Routes>
-      <Footer/>
-    </Router>
+      <Footer hideButton={location.pathname=="/Contact"}/>
+    </>
   );
 }
 
