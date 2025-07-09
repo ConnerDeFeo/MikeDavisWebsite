@@ -6,7 +6,7 @@ const Navbar = ()=>{
         <div className="bg-blue-800 h-15 md:h-20 flex items-center">
             <div className="flex justify-between w-[95%] mx-auto">
                 <img 
-                    src="./compass.webp" 
+                    src="/compass.webp" 
                     alt="compassLogo" 
                     className="cursor-pointer my-auto bg-white rounded-full border border-blue-800 compassLogo h-12 md:h-15"
                     onClick={() => navigate("/")}
