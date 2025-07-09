@@ -10,7 +10,7 @@ const Home = () => {
     //Each of the three differnt sectors on the home page
     const InformationComponent = (imageSrc: string, title: string, paragraph: string, onClick:()=>void):React.ReactNode => {
         return (
-            <div className="w-[60%] mx-auto sectionLink cursor-pointer" onClick={onClick}>
+            <div className="w-[60%] min-w-70 mx-auto sectionLink cursor-pointer" onClick={onClick}>
                 <img src={imageSrc} alt={title} className={imageStyling} />
                 <h2 className={titleStyling}>{title}</h2>
                 <p className={paragraphStyling}>{paragraph}</p>
